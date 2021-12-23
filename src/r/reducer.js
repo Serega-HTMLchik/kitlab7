@@ -5,7 +5,7 @@ const State = {
 export default function allReducers(state = State, action) {
   if (action.type === "ADD_TO_FRIENDS") {
     const i =
-      JSON.stringify(state.friends).indexOf(JSON.stringify(action.payload)) !=
+      JSON.stringify(state.friends).indexOf(JSON.stringify(action.payload)) !==
       -1;
     if (!i)
       return {
